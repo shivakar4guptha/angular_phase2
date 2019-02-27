@@ -1,13 +1,13 @@
-<p>
+ <p>
   first-comp works!
 </p>
 <div (click)="onClickMeth($event)">click me!
   <span>
     <p>dfdfk</p>
-    <input type="number" (click)="newnum($event)"/>
+    <input type="number" (click)="newnum($event)" ngDefaultControl/>
   </span>
 </div>
-<input type='text' (keyup)="press($event)"/>
+<input type='text' (keyup)="press($event)" ngDefaultControl/>
 
 
 {{data}}
