@@ -11,11 +11,11 @@ import { Data } from "./first.comp.data";
 export class FirstCompComponent implements OnInit {
 
   data: any;
-  data1: Data;
-  constructor(private sampleService: SampleService, secondCom: SecondComp) {
-    this.data1 = new Data();
+  data1: Data = new Data();
+  constructor(private sampleService: SampleService) {
+    this.data1.name;
     this.data = 23;
-    this.secondCom;
+    //this.secondCom;
    }
 
   ngOnInit() {
