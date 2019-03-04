@@ -9,6 +9,7 @@ import { SecondComponent } from './second/second.component';
 import { FormsModule } from '@angular/forms';
 import { Shiva1stComponent } from './shiva1st/shiva1st.component';
 import { SampleService } from './sample.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SampleService } from './sample.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

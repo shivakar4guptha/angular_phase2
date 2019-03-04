@@ -4,10 +4,39 @@
 <div (click)="onClickMeth($event)">click me!
   <span>
     <p>dfdfk</p>
-    <input type="number" (click)="newnum($event)" ngDefaultControl/>
+    <input type="number" (click)="newnum($event)" />
   </span>
 </div>
-<input type='text' (keyup)="press($event)" ngDefaultControl/>
+<input type='text' (keyup)="press($event)"/>
+<div *ngFor="let element of testAry">{{element}}</div>
+<!-- <div *ngFor="let values of response">{{values.id}}  abcd {{values.employee_name}} {{values.employee_salary}}  {{values.employee_age}}   {{values.profile_image}} </div> -->
+  <table style="width:500px; border:3px solid">
+      <th>Id</th>
+      <th>Employee_Name</th>
+      <th>Employee_salary</th>
+      <th>employee_age</th>
+     
+      <th>Profile_image</th>
+      <tr *ngFor="let obj of response" style="width:100px; border: 1px solid">
+          <td *ngFor="let loop of obj | keyvalue">{{loop.value}}</td>
+     
+         </tr>
+  </table>
+<!-- <div >
+  <table style  = "1px solid">
+      
+      
+    
+   <div *ngFor="let loop of obj | keyvalue">
+      {{loop.key}}  ::: {{loop.value}}
+  </div> -->
+<!-- </table>
+</div>
+<table>
+  <th>Id</th>
+  <th>Name</th>
+  <th></th>
+</table> --> 
 
 
-{{data}}
+{{response?.name}} 

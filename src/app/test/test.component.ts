@@ -8,13 +8,23 @@ import {AppComponent, ABC } from '../app.component';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  
+  secArray = ["dkhsd", 233, 'ss','fsf', 44];
+  newAddr = {
+    "sdksd": "aba",
+    "sdkdjdjdsd": "abajsj",
+    "sdssssssksd": "abaww",
+    "sdweddksd": "aba",
+    "swwwdksd": "aba",
+  };
   constructor() { 
     
   }
 
   ngOnInit() {
     
+  }
+  getKeys(){
+    return Object.keys(this.newAddr);
   }
   m1(){
 
