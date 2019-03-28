@@ -1,0 +1,37 @@
+<!-- <form #form = "ngForm" (ngSubmit)="submit(form.value)">
+  User name : <input type="text" name = "userName" ngModel/><br>
+  Password: <input type="text" name = "Password" ngModel/>
+  <button type="submit">submit</button>
+</form> -->
+<!-- {{form.value | json}} -->
+
+<form #form2 = "ngForm"  (ngSubmit)="addressForm(form2.value)">
+  <fieldset ngModelGroup="address">
+      Address1 : <input type="text" name = "Address Line1" ngModel cus-val/><br>
+      Address2 : <input type="text" name = "Address Line2" ngModel/><br>
+      Zipcode : <input type="number" name = "Zipcode" ngModel/><br>
+      State : <input type="text" name = "State" ngModel/>
+
+
+  </fieldset>
+  <fieldset ngModelGroup="user">
+      FirstName : <input type="text" name = "firstName" [ngModel]= "user.fn" #fn="ngModel" required minlength="4" maxlength="15"/><br>
+      <span *ngIf=" form2.submitted && fn.errors?.minlength" required style="color:red">enter atleast 4 chars</span> <br>
+      LastName : <input type="text" name = "LastName" [ngModel] = "user.ln"/><br>
+      Ph No : <input type="text" name = "Phone" #phNum="ngModel" [ngModel] = "user.add" pattern="[1-9]{3}-[0-9]{3}-[0-9]{4}$"/><br>
+      <span *ngIf="phNum.errors?.pattern" style="color:red">Please enter valid phone number</span><br>
+      <!-- <input type="email" name="email" ngModel #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required> -->
+      email : <input type="text" name = "mailid" email required #mailVal="ngModel" [ngModel] = "user.email"/><br>
+      <span *ngIf="mailVal.errors?.email" style="color:red">pls enter proper meila or email is requeired
+      </span>
+      <span *ngIf="mailVal.touched" style="color:rgb(211, 41, 41)">pls enter email or email is mandatory</span>
+
+    
+
+  </fieldset>
+  <!-- <input type="submit" value="submit"/> -->
+  <button type="submit">click</button>
+</form>
+{{form2.value | json}}
+
+

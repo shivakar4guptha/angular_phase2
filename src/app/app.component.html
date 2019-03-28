@@ -1,13 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+
+<div cusDir style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
-  
+  <a routerLink="/click1">click here </a>
+  <input type="button" value="app-second" routerLink="/secondComp"/>
+    
 </div>
+<!-- <input type="text" [(ngModel)]="bindVal">
+bind valis..... {{bindVal}}
 <h2>Here are some links to help you start: </h2>
-<app-second></app-second>
-<app-shiva1st></app-shiva1st>
-<router-outlet></router-outlet>
-<app-test></app-test>
-<app-first-comp></app-first-comp>
+<app-second (sendEve)=fetchEve($event)></app-second>
+<app-shiva1st></app-shiva1st> -->
+<div style="border: 1px solid red">
+  <router-outlet></router-outlet>
+</div>
+<!-- <app-test></app-test> --> 
+
+<!-- <div>
+  this is from DIV
+  <app-first-comp (triggerEvnt) ="fromChildCmp($event)" [abcFromParent] = "abc" [objFromParent]="obj" [bindedVal]="'parent'"></app-first-comp>
+</div> -->

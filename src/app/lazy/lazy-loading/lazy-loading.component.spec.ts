@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecondComponent } from './second.component';
-';
+import { LazyLoadingComponent } from './lazy-loading.component';
 
-describe('SecondComponent', () => {
-  let component: SecondComponent;
-  let fixture: ComponentFixture<SecondComponent>;
+describe('LazyLoadingComponent', () => {
+  let component: LazyLoadingComponent;
+  let fixture: ComponentFixture<LazyLoadingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecondComponent ]
+      declarations: [ LazyLoadingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SecondComponent);
+    fixture = TestBed.createComponent(LazyLoadingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

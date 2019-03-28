@@ -1,4 +1,7 @@
- <p>
+{{accessVal}}215515150555555555555
+<app-some></app-some>
+<app-new-mod></app-new-mod>
+<p>
   first-comp works!
 </p>
 <div (click)="onClickMeth($event)">click me!
@@ -9,19 +12,35 @@
 </div>
 <input type='text' (keyup)="press($event)"/>
 <div *ngFor="let element of testAry">{{element}}</div>
+<div>
+  <input type="text" [(ngModel)]="fn"/>
+  <input type="text" [(ngModel)]="sal"/>
+  <input type="text" [(ngModel)]="dob"/>
+  <input type="button" (click)="postServ()" value="clickme"/>
+  <input type="button" (click)="empty()" value="clear"/>
+  <input type="button" (click)="deleting()" value="delete"/>
+</div>
+<input type="text" [(ngModel)] = "retrieveId" (click)="newTry()"/>
 <!-- <div *ngFor="let values of response">{{values.id}}  abcd {{values.employee_name}} {{values.employee_salary}}  {{values.employee_age}}   {{values.profile_image}} </div> -->
-  <table style="width:500px; border:3px solid">
-      <th>Id</th>
+   <table style="width:500px; border:3px solid">
+      
+      
       <th>Employee_Name</th>
-      <th>Employee_salary</th>
-      <th>employee_age</th>
+      <th>E_A</th>
+      <th>E_s</th>
+     <th>Id</th>
+     <th>P_A</th>
+     <th>Button</th>
      
-      <th>Profile_image</th>
+       
       <tr *ngFor="let obj of response" style="width:100px; border: 1px solid">
           <td *ngFor="let loop of obj | keyvalue">{{loop.value}}</td>
-     
+          <td><input type="button" value="enter" (click)=newTry(obj.id)></td>
          </tr>
   </table>
+  <div *ngFor="let belowTab of printVal | keyvalue">{{belowTab.key}}:: {{belowTab.value}}
+
+  </div>
 <!-- <div >
   <table style  = "1px solid">
       

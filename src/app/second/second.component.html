@@ -1,4 +1,18 @@
 <p>
   second works!
 </p>
+<app-forms></app-forms>
 <div [(ngModel)]= "test" ngDefaultControl></div>
+<input type="button" value="child1" routerLink="/secondComp/child1"/>
+
+<div style="border: 1px solid yellow">
+  <router-outlet></router-outlet>
+</div>
+
+<div>
+  <input type="text" value="userId"/>
+  <input type="text" value="Password"/>
+</div>
+<input type="button" (click)="login()"value="Login"/>
+<input type="button" (click)="logout()"value="Logout"/>
+<input type="button" routerLink="/delayed/something" value="delay load"/>
