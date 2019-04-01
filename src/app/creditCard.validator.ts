@@ -14,18 +14,7 @@ export class CreditCardValidator implements Validator {
   }
 
   static validateCcNumber(control: FormControl): ValidationErrors | null {
-    if (!(control.value.startsWith('37')
-      || control.value.startsWith('4')
-      || control.value.startsWith('5'))
-    ) {
-      // Return error if card is not Amex, Visa or Mastercard     
-      return { creditCard: 'Your credit card number is not from a supported credit card provider' };
-    } else if (control.value.length !== 16) {
-      console.log(control.value)
-      // Return error if length is not 16 digits
-      return { creditCard: 'A credit card number must be 16-digit long' };
-    }
-    // If no error, return null  
-    return null;
+     
+    return { creditCard: 'Your credit card number is not from a supported credit card provider' };
   }
 }

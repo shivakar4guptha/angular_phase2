@@ -23,6 +23,9 @@
       Ph No : <input type="text" name = "Phone" cusval #phNum="ngModel" [ngModel] = "user.add" pattern="[1-9]{3}-[0-9]{3}-[0-9]{4}$"/><br>
       <span *ngIf="phNum.errors?.pattern" style="color:red">Please enter valid phone number</span><br>
       <span *ngIf="phNum.errors?.emailvalidator">from custom validation</span>
+      <span *ngIf="phNum.errors?.validCreditCard">from creditcard vali</span>
+      <span *ngIf="phNum.errors?.creditCard">from llll vali</span>
+      
       <!-- <input type="email" name="email" ngModel #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required> -->
       email : <input type="text" name = "mailid" email required #mailVal="ngModel" [ngModel] = "user.email"/><br>
       <span *ngIf="mailVal.errors?.email" style="color:red">pls enter proper meila or email is requeired

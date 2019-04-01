@@ -1,0 +1,9 @@
+<p>
+  reactive-validation works!
+</p>
+
+<form [formGroup] ="testForm" (ngSubmit)="testformData(testForm)">
+  <input type="text" formControlName = 'fname' placeholder = 'firstName'/>
+  <input type="text" formControlName = 'sname' placeholder = 'secondName'/>
+  <input type="submit" value="submit data"/>
+</form>

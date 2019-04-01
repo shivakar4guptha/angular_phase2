@@ -19,6 +19,7 @@ import { FormsComponent } from './forms/forms.component';
 import { CustomDir } from './forms/directiveConcept';
 import { Validating } from './forms/validation.directive';
 import { CreditCardValidator } from './creditCard.validator';
+import { ReactiveValidationComponent } from './reactive-validation/reactive-validation.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CreditCardValidator } from './creditCard.validator';
     ChildComponent,
     FormsComponent,
     CustomDir,
-    CreditCardValidator
+    CreditCardValidator,
+    ReactiveValidationComponent
   ],
   imports: [
     BrowserModule,
