@@ -18,7 +18,7 @@ import {RoterGarudService} from './roter-garud.service';
 import { FormsComponent } from './forms/forms.component';
 import { CustomDir } from './forms/directiveConcept';
 import { Validating } from './forms/validation.directive';
-
+import { CreditCardValidator } from './creditCard.validator';
 
 
 @NgModule({
@@ -31,7 +31,8 @@ import { Validating } from './forms/validation.directive';
     NewModComponent,
     ChildComponent,
     FormsComponent,
-    CustomDir
+    CustomDir,
+    CreditCardValidator
   ],
   imports: [
     BrowserModule,

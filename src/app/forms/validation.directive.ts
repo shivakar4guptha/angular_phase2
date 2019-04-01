@@ -1,13 +1,13 @@
 import {Directive} from '@angular/core';
 import { NG_VALIDATORS } from '@angular/forms';
-import {cusValPractice} from './customVal';
+import {CusValPractice} from './customVal';
 
 @Directive ({
-    selector: '[cus-val][ngModel]',
+    selector: '[cusval][ngModel]',
     providers : [
         {
            provide : NG_VALIDATORS,
-           useExisting : cusValPractice,
+           useExisting : CusValPractice,
            multi : true 
         }
     ]
