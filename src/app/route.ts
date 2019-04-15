@@ -5,21 +5,37 @@ import { Component } from '@angular/core';
 import { ChildComponent } from './child/child.component';
 import { RoterGarudService } from './roter-garud.service';
 import {TestComponent} from './test/test.component';
+import { AboutComponent } from './about/about.component';
+
+import { LiveComponent } from './live/live.component';
 
 export const routes: Routes = [
+ 
   {
     path : "",
-    redirectTo: "/click1",
+    redirectTo: "/about",
     pathMatch: "full"
+  },
+  {
+    path: "examples",
+    loadChildren : "./examples/angular-examples.module#AngularExamplesModule"
+  },
+  {
+    path: "live",
+    component: LiveComponent
+  },
+  {
+    path: "about",
+    component: AboutComponent
   },
     {
       path : "click1",
       component: FirstCompComponent,
-      canActivate : [ RoterGarudService ],
-      data: {
-        "abc": "data",
-        "isAvail":true
-    }
+      //canActivate : [ RoterGarudService ],
+    //   data: {
+    //     "abc": "data",
+    //     "isAvail":true
+    // }
     },
     {
       path: "secondComp",
@@ -29,10 +45,10 @@ export const routes: Routes = [
       ]
       
     },
-    {
-      path: "testComp",
-      component: TestComponent
-    },
+    // {
+    //   path: "testComp",
+    //   component: TestComponent
+    // },
     {
       path: "lazy",
       loadChildren : "./lazy/lazy.module#LazyModule"

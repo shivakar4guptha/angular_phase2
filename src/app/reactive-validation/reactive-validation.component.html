@@ -3,7 +3,24 @@
 </p>
 
 <form [formGroup] ="testForm" (ngSubmit)="testformData(testForm)">
-  <input type="text" formControlName = 'fname' placeholder = 'firstName'/>
-  <input type="text" formControlName = 'sname' placeholder = 'secondName'/>
-  <input type="submit" value="submit data"/>
+ 
+  <input type="text" formControlName = 'fname' placeholder = 'firstName'/><br>
+  <span *ngIf="(f.fname?.errors?.required || f.fname?.errors?.minlength) && f.fname.touched" style="color:red">fname required</span>
+  <input type="text" formControlName = 'sname' placeholder = 'secondName'/><br>
+  <span *ngIf="f.sname?.errors?.minlength || f.sname.touched" style="color:red; font-weight:bold;">Second name should be minimum of 2 characters</span>
+  <input type="checkbox" formControlName="somethingVal" Value="Alive"/>sodhi <br>
+  <input type="submit" value="submit data"/> 
+  
 </form>
+
+<span>
+{{sample | uppercase}}
+{{data | json}}
+{{date | date:'d/m/y'}}
+{{'test' |uppercase}}
+dklfj <br>
+
+{{588 | currency:'INR'}} <br>
+{{233.322 | number:'3.2-3'}} <br>
+{{'trying custom' | pipeconcept}}
+</span>

@@ -1,0 +1,21 @@
+<p>
+  explore-form works!
+</p>
+<form [formGroup]="deepDive" (ngSubmit)="deepDiveData(deepDive)">
+    <input type="text" value="phNo" formControlName='phone' placeholder="Phone Number"/><br>
+      <span *ngIf="deepVal.phone?.errors?.required && deepVal.phone.touched" style="color:rebeccapurple"> mandatory field</span><br>
+      <!-- <span *ngIf="deepVal.phone?.errors?.pattern" style="color:rebeccapurple"> please enter correct format</span><br> -->
+      <!-- <span *ngIf="deepVal.phone?.errors?.minlength" style="color:rebeccapurple"> lenth should be more</span><br> -->
+      <span *ngIf="deepDive.controls['phone'].hasError('minlength')"  style="color:blue">lenth should be more</span>
+      <span *ngIf="deepDive.controls['phone'].hasError('required')"  style="color:blue">mandatory field111</span>
+      <span *ngIf="deepDive.controls?.phone.hasError('pattern')" style="color: red;"> Invalid Format</span><br>
+    <input type="Number" value="age" formControlName="vayasu" placeholder="Age"/><br>
+      <span *ngIf="deepVal.vayasu?.errors?.required  && deepVal.vayasu.touched" style="color:rebeccapurple"> mandatory field</span><br>
+    <input type="number" value="sal" formControlName="jeetam" placeholder="Salary"/><br>
+      <span *ngIf="deepVal.jeetam?.errors?.required  && deepVal.jeetam.touched" style="color:rebeccapurple"> mandatory field</span><br>
+      <input type="text" value="mailid" formControlName='mail' placeholder="Email id"/><br>
+      <span *ngIf="deepVal.mail?.errors?.required && deepVal.mail.touched || deepVal.mail?.errors?.email" style="color:rebeccapurple"> mandatory field</span><br>
+      <!-- <span *ngIf="deepVal.phone?.errors?.pattern" style="color:rebeccapurple"> please enter correct format</span><br> -->
+      
+    <input type="Submit" value="submit"/>
+</form>

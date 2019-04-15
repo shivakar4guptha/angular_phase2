@@ -1,0 +1,12 @@
+<p>
+  reactive-second-phase works!
+</p>
+<form [formGroup]="vali2" (ngSubmit)="vali2Data(vali2)">
+    <input type="text" formControlName="address1" placeholder="Street Address" value="saddr"/><br>
+    <span *ngIf="phase2Val.address1?.errors?.required || phase2Val.address1?.errors?.minLength" style="color:blue; font-weight:200px;"> This field is mandetory</span><br>
+    <input type="text" formControlName="uru" placeholder="City" value="city"/>
+    <span *ngIf="phase2Val.uru?.errors?.required || phase2Val.uru?.errors?.minLength" style="color:blue; font-weight:200px;"> This field is mandetory</span><br>
+    <input type="text" formControlName="pincode" placeholder="Zip" value="zip"/>
+    <span *ngIf="phase2Val.pincode?.errors?.required || phase2Val.pincode?.errors?.maxLength" style="color:blue; font-weight:200px;"> This field is mandetory</span><br>
+    <input type="submit"  value="continue"/>
+</form>

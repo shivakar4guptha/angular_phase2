@@ -20,6 +20,16 @@ import { CustomDir } from './forms/directiveConcept';
 import { Validating } from './forms/validation.directive';
 import { CreditCardValidator } from './creditCard.validator';
 import { ReactiveValidationComponent } from './reactive-validation/reactive-validation.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveSecondPhaseComponent } from './reactive-second-phase/reactive-second-phase.component';
+import { ExploreFormComponent } from './explore-form/explore-form.component';
+import { PipeConcept }  from './reactive-validation/pipe';
+import { MatTabsModule } from '@angular/material';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { AboutComponent } from './about/about.component';
+// import { ExamplesComponent } from './examples/examples.component';
+import { LiveComponent } from './live/live.component';
+import { AngularExamplesModule } from './examples/angular-examples.module';
 
 
 @NgModule({
@@ -34,7 +44,12 @@ import { ReactiveValidationComponent } from './reactive-validation/reactive-vali
     FormsComponent,
     CustomDir,
     CreditCardValidator,
-    ReactiveValidationComponent
+    ReactiveValidationComponent,
+    ReactiveSecondPhaseComponent,
+    ExploreFormComponent,
+    PipeConcept,
+    AboutComponent,
+    LiveComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +57,12 @@ import { ReactiveValidationComponent } from './reactive-validation/reactive-vali
     FormsModule,
     HttpClientModule,
     DataModule,
-    KothaModule
+    KothaModule,
+    ReactiveFormsModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    AngularExamplesModule
   ],
   providers: [RoterGarudService, Validating],
   bootstrap: [AppComponent],
