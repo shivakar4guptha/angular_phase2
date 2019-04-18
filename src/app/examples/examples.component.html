@@ -1,14 +1,14 @@
-<p>
-  examples works!
-</p>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>Examples listed here <br><br><br>
+        <div label="Angular Introducing"  routerLink="/examples/intro">Angular Introduction</div><br>
+        <div label="Angular Setup"  routerLink="/examples/setup">Angular Setup</div><br>
+        <div label="Creating Components"  routerLink="/examples/compCreation">Creating Components</div><br>
+        <div label="dataBinding" routerLink="/examples/dataBinding">dataBinding</div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
 
-
-<div>
-<!-- <nav mat-tab-nav-bar class="nav-bar">
-     <a mat-tab-link class ="header-tabs"  routerLink="/compCreation">Creating Components</a>
-      <a mat-tab-link class ="header-tabs" routerLink="/dataBinding">dataBinding</a>
- </nav> -->
-
-
-<router-outlet></router-outlet>
 

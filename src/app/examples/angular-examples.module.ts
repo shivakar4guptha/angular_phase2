@@ -1,12 +1,45 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { routes } from './example-route';
-// import { RouterModule } from '@angular/router';
+
 import {ExamplesRoutingModule } from './example-routing.module';
 import {ExamplesComponent} from './examples.component';
 import { CreatingComponentComponent } from './components/creating-component/creating-component.component';
 import { TwowaybindingComponent } from './components/twowaybinding/twowaybinding.component';
-import { MatTabsModule } from '@angular/material';
+import { MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule } from '@angular/material';
 import { AngularSetupComponent } from './components/angular-setup/angular-setup.component';
 import { AngularIntroComponent } from './components/angular-intro/angular-intro.component';
 import { AngularTypescriptComponent } from './components/angular-typescript/angular-typescript.component';
@@ -35,7 +68,41 @@ import { AngularServicesComponent } from './components/angular-services/angular-
   imports: [ 
     CommonModule, 
     ExamplesRoutingModule,
-    MatTabsModule
+    MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule
   ],
   providers: [],
   bootstrap: [],

@@ -6,8 +6,12 @@ import { ChildComponent } from './child/child.component';
 import { RoterGarudService } from './roter-garud.service';
 import {TestComponent} from './test/test.component';
 import { AboutComponent } from './about/about.component';
-
+import { ExamplesComponent } from './examples/examples.component';
 import { LiveComponent } from './live/live.component';
+import { CreatingComponentComponent } from './examples/components/creating-component/creating-component.component';
+import { TwowaybindingComponent } from './examples/components/twowaybinding/twowaybinding.component';
+import { AngularIntroComponent } from './examples/components/angular-intro/angular-intro.component';
+import { AngularSetupComponent } from './examples/components/angular-setup/angular-setup.component';
 
 export const routes: Routes = [
  
@@ -18,7 +22,29 @@ export const routes: Routes = [
   },
   {
     path: "examples",
-    loadChildren : "./examples/angular-examples.module#AngularExamplesModule"
+    component: ExamplesComponent,
+    children : [
+      {
+        path:"",
+        component: CreatingComponentComponent
+      },
+      {
+          path:"compCreation",
+          component: CreatingComponentComponent
+      },
+      {
+          path:"dataBinding",
+          component: TwowaybindingComponent
+      },
+      {
+          path:"intro",
+          component: AngularIntroComponent
+      },
+      {
+          path:"setup",
+          component: AngularSetupComponent
+      }
+    ]
   },
   {
     path: "live",
