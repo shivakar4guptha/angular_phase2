@@ -8,3 +8,12 @@
 .header-tabs {
     border: 1px solid;
 }
+
+.example-container {
+    
+    position: absolute;
+    height: 500px;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
