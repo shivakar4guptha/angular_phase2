@@ -11,5 +11,10 @@ export class AngularSetupComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  nodeInstall(){
+    window.open("https://nodejs.org/en/download/", "_blank");
+  }
+  visualStudio(){
+    window.open("https://visualstudio.microsoft.com/downloads/", "_blank");
+  }
 }
