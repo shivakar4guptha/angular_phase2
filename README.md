@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## sample json
 
 http://dummy.restapiexample.com/
+
+## responsive example
+
+https://stackblitz.com/edit/responsive-menu-angular-material-flex-layout?file=src%2Fapp%2Fapp.component.ts
