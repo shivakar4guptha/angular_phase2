@@ -66,7 +66,7 @@ import { AboutComponent } from './about/about.component';
 import { LiveComponent } from './live/live.component';
 import { AngularExamplesModule } from './examples/angular-examples.module';
 // import { FlexLayoutModule } from "@angular/flex-layout";
-
+import {MyNavComponent} from './my-nav/my-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +84,8 @@ import { AngularExamplesModule } from './examples/angular-examples.module';
     ExploreFormComponent,
     PipeConcept,
     AboutComponent,
-    LiveComponent
+    LiveComponent,
+    MyNavComponent
   ],
   imports: [
     BrowserModule,
