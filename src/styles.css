@@ -18,5 +18,21 @@ body {
 .clickLink {
   color: blue !important;
 }
+
+.page-header {
+  font-size: 32px;
+  font-weight: bold;
+
+}
+
+.body-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.body-contect {
+  font-size: 20px;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

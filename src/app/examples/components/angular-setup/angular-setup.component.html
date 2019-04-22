@@ -1,31 +1,36 @@
-<h2>
+<div class="page-header">
   Angular Setup!
-</h2>
+</div>
 
-<h3>
+<div class="body-header">
   Prerequisites to setup angular application.<br>
   Basic Knowledge on below technologies:
-</h3>
+</div>
 <mat-list>
     <mat-list-item> Html </mat-list-item>
     <mat-list-item> CSS </mat-list-item>
     <mat-list-item> Javascript </mat-list-item>
     <mat-list-item> TypeScript </mat-list-item>
 </mat-list>
-<h3>
+<div class="body-header">
   Suggested applications to be installed
-</h3>
+</div>
 <mat-action-list>
     <mat-list-item (click)="nodeInstall()" class="clickLink">Node Js (Click me to redirect to installation page) </mat-list-item >
     <mat-list-item (click)="visualStudio()" class="clickLink">Visual studio is suggested (Click me to redirect to installation page)</mat-list-item >
  </mat-action-list>
 
-<h2>
+ <div class="body-header">
   Install Angular application
-</h2>
-<span>
-  To install application please use below command 
-  <p>
-    npm install -g @angular/cli
-  </p>
-</span>
+ </div>
+ <div class="body-contect">
+    To install application please run below commands from the terminal or console 
+    <mat-list>
+        <mat-list-item> <b>npm install -g @angular/cli</b> </mat-list-item>
+        <mat-list-item> navigate to folder where you want to have your workspace </mat-list-item>
+        <mat-list-item> run command: &nbsp; <b> "ng new angularApp" </b> &nbsp; to create agular workspace </mat-list-item>
+        <mat-list-item> By using the abpve command angular creates sample workspace with all the dependecies of application </mat-list-item>
+        <mat-list-item> To start the server for your application use command &nbsp; <b>ng serve</b> &nbsp; from the folder of the project </mat-list-item>
+    </mat-list>
+    
+ </div>
