@@ -25,8 +25,12 @@ body {
 
 }
 
-.body-header {
+.sub-header {
   font-size: 24px;
+  font-weight: bold;
+}
+.body-header {
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -34,5 +38,8 @@ body {
   font-size: 20px;
 }
 
+mat-sidenav-container {
+  margin-left: 25px;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

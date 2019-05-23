@@ -1,17 +1,43 @@
 <div class="page-header">
-  How to create component in Angular
+  Component
+</div>
+  <mat-list>
+    <mat-list-item> A component controls a patch of screen called a view. </mat-list-item>
+    <mat-list-item> To write a component in Angular we have to import dependencies intially using importing(explained in detail below) </mat-list-item>
+    <mat-list-item> After importing we have to define Decorator to the component to describe its Structure (Emplained below) </mat-list-item>
+    <mat-list-item> Having a class to a component is necessary. Class to component is similar to brain for humans </mat-list-item>    
+  </mat-list>
+<div class="sub-header">
+  Creating a component in Angular
 </div>
 
 <div class="body-contect">
   There are couple of ways to create a component.
-</div><mat-list>
+</div>
+<mat-list>
     <mat-list-item> <b>Manual Creation</b> </mat-list-item>
     <mat-list-item> Create html, ts, spec, css files with prescribed extensions and import component clas in module file</mat-list-item>
     <mat-list-item> <b>Using command line</b></mat-list-item>
-    
+    <mat-list-item> Command used to create component &nbsp; <b>"ng generate component componentName" in short "ng g c compName"</b></mat-list-item>
     <mat-list-item style="color: red"> Note: Dont give spaces in component name</mat-list-item>
-  </mat-list>
+</mat-list>
 
+
+  <div class="sub-header">
+    Component Structure
+  </div>
+
+  <mat-list>
+    <mat-list-item> <b>importing</b> </mat-list-item>
+      <mat-list-item> import all the dependencies of the component in the import section.</mat-list-item>
+      <mat-list-item>For example: "import  &#123; Component, OnInit &#125;  from '@angular/core';" </mat-list-item>
+    <mat-list-item> <b>Decorator</b> </mat-list-item>
+      <mat-list-item> Decorator decides behaviour of the class (Component/Service/Module/Service etc..) </mat-list-item>
+      <mat-list-item> Example: @Component(&#123;..&#125;) / @Module(&#123;..&#125;) / @Injectable(&#123;..&#125;) </mat-list-item>
+    <mat-list-item> <b>Class</b> </mat-list-item>
+      <mat-list-item> Blue print of the com ponent, this contains any number of methods and variables </mat-list-item>
+      <mat-list-item> Example: export class ComponentName &#123;..&#125; </mat-list-item>
+  </mat-list>
 
 <!-- <ol>
   <li>Manual Creation</li>

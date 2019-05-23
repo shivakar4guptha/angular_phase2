@@ -1,6 +1,8 @@
 <p>
   explore-form works!
 </p>
+
+<!-- Reactive Forms -->
 <form [formGroup]="deepDive" (ngSubmit)="deepDiveData(deepDive)">
     <input type="text" value="phNo" formControlName='phone' placeholder="Phone Number"/><br>
       <span *ngIf="deepVal.phone?.errors?.required && deepVal.phone.touched" style="color:rebeccapurple"> mandatory field</span><br>
