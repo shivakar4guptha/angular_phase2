@@ -1,0 +1,105 @@
+
+<p-table #dt [columns]="cols" [value]="dataMarts" [paginator]="true" [rows]="15" [pageLinks]="5" [rowsPerPageOptions]="[5,10,15,20,50,100,200,500,1000]"
+ (onPage)="paginate($event)" [first]="first">
+	<ng-template pTemplate="header" let-columns>
+		<tr>
+			<th *ngFor="let col of columns">
+				{{col.header}}
+			</th>
+		</tr>
+	</ng-template>
+	<ng-template pTemplate="body" let-rowData let-columns="columns">
+		<tr>
+			<td *ngFor="let col of columns">
+				{{rowData[col.field]}}
+			</td>
+		</tr>
+	</ng-template>
+</p-table>
+
+
+
+
+
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
+import { Subscription } from 'rxjs/Subscription';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+  cols: any[];
+  dataMarts: any[];
+  sub: Subscription;
+  first = 0;
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.cols = [
+      { field: 'Id', header: 'Id' },
+      { field: 'vin', header: 'Vin' },
+      { field: 'year', header: 'Year' },
+      { field: 'brand', header: 'Brand' },
+      { field: 'color', header: 'Color' }
+    ];
+
+    this.getDataFromApi();
+
+    this.sub = Observable.interval(3000)
+      .subscribe((val) => {
+        this.getDataFromApi();
+      });
+
+  }
+
+  getDataFromApi() {
+    console.log('get data from api');
+    this.dataMarts = [];
+    for (let i = 0; i < 50; i++) {
+      this.dataMarts.push({ Id: i, 'vin': 'Vin ' + i, year: 2000 + i, 'brand': 'Brand ' + i, color: 'Color ' + i });
+    }
+  }
+
+  paginate(event) {
+    
+    this.first = event.first;
+  }
+
+}
+
+
+
+
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
+
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CalendarModule } from 'primeng/calendar';
+import { CheckboxModule } from 'primeng/checkbox';
+import { DataTableModule } from 'primeng/datatable';
+import { DialogModule } from 'primeng/dialog';
+import { FileUploadModule } from 'primeng/fileupload';
+import { InputMaskModule } from 'primeng/inputmask';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { TableModule } from 'primeng/table';
+import { TabViewModule } from 'primeng/tabview';
+
+
+@NgModule({
+  imports: [BrowserModule, BrowserAnimationsModule, FormsModule, AutoCompleteModule, CalendarModule, CheckboxModule, DialogModule, FileUploadModule, DataTableModule, InputMaskModule, MultiSelectModule, TableModule, TabViewModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
