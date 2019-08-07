@@ -33,3 +33,6 @@ http://dummy.restapiexample.com/
 ## responsive example
 
 https://stackblitz.com/edit/responsive-menu-angular-material-flex-layout?file=src%2Fapp%2Fapp.component.ts
+
+## pagination example link
+https://stackblitz.com/edit/angular-glrthe?file=main.ts
